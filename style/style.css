@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --blur-back1: rgba(0, 255, 178, 0.10);
+    --blur-back2: rgba(0, 83, 206, 0.24);
+    --blur-back3: rgba(0, 206, 169, 0.18);
+
+    --poppins: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: url("../imgs/image\ 1.png");
+    padding: 38px 120px 0 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container__left{
+    position: relative;
+    z-index: 5;
+}
+
+.container__right {
+    position: relative;
+    z-index: 4;
+}
+
+.logo img{
+   width: 132.936px;
+   height: 82px;
+}
+
+.left__content{
+    width: 664px;
+}
+
+.left__content h1 {
+    color: #193C3F;
+    font-family: var(--poppins);
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 85.8px;
+}
+
+.left__content h1 span {
+    color: #FFF;
+    padding: 2px 15px;
+    border-radius: 18px;
+    background: #3CB27F;
+}
+
+.left__content p:nth-child(2) {
+    color: #48635B;
+    font-family: var(--poppins);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.68px;
+    margin: 30px 0;
+}
+
+.left__content p:nth-child(2)  span {
+    color: #48635B;
+    font-weight: 600;
+}
+
+.left__content .text p{
+    color: #000;
+    font-family: var(--poppins);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.left__content .text p span {
+    color: #3CB27F;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.left__content .text {
+    position: relative;
+}
+
+.left__content .text svg:nth-child(2) {
+    position: absolute;
+    right: 160px;
+    top: 50px;
+}
+
+.left__content .text svg:nth-child(3) {
+   display: none;
+}
+
+.left__content .btn {
+    width: 343px;
+    height: 60px;
+    border-radius: 12px;
+    background: #FB4545;
+    box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.10);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 33px;
+     /* text style */
+     color: #FFF;
+     font-family: var(--poppins);
+     font-size: 17px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: 132%; /* 22.44px */
+     text-transform: uppercase;
+}
+
+.left__content .btn:hover {
+    box-shadow: -7px -7px 0px 0px rgba(0, 0, 0, 0.10);
+    opacity: 0.8;
+}
+
+.left__servce {
+    display: flex;
+    gap: 18px;
+    justify-content: flex-start;
+    margin-top: 75px;
+    margin-bottom: 68px;
+}
+
+.left__servce-card {
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.10);
+    width: 158px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left__servce-card h3{
+    color: #193C3F;
+    font-family: var(--poppins);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39.6px; 
+}
+
+.left__servce-card p {
+    color: rgba(25, 60, 63, 0.50);
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%; /* 21.12px */
+}
+
+/* container__right */
+
+.container__right {
+    position: absolute;
+    bottom: -5px;
+    right: -90px;
+}
+
+/* blur card */
+
+.blur1 {
+    position: absolute;
+    flex-shrink: 0; 
+    width: 1041px;
+    height: 1041px;
+    border-radius: 1041px;
+    background: rgba(0, 255, 178, 0.20);
+    filter: blur(250px);
+    z-index: 2;
+    top: -69px;
+    left: -139px;
+}
+
+.blur2 {
+    position: absolute;
+    width: 782px;
+    height: 782px;
+    top: -82px;
+    right: -152px;
+    border-radius: 782px;
+    background: rgba(0, 83, 206, 0.24);
+    filter: blur(250px);
+    z-index: 2;
+}
+
+.blur3 {
+    position: absolute;
+    width: 782px;
+    height: 782px;
+    flex-shrink: 0;
+    border-radius: 782px;
+    background: rgba(0, 206, 169, 0.18);
+    filter: blur(250px);
+    bottom: -173px;
+    right: -92px;
+    z-index: 2;
+}
+
+.blur4 {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    background: linear-gradient(90deg, #fff 40%, rgba(0, 206, 169, 0.18));
+    top: 0;
+    left: 0;
+
+}
