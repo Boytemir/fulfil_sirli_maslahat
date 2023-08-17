@@ -15,7 +15,8 @@
 }
 
 .container {
-    background: url("../imgs/image\ 1.png");
+    background: url("../imgs/image\ 1.png") center center no-repeat;
+    background-size: cover;
     padding: 38px 120px 0 120px;
     overflow: hidden;
     position: relative;
@@ -172,6 +173,60 @@
     right: -90px;
 }
 
+.ellips-card {
+    position: absolute;
+    width: 266.914px;
+    height: 266.18px;
+    border-radius: 266.914px;
+    background: #FFF;
+    bottom: 30px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 20px;
+    transform: rotate(15deg);
+}
+
+.ellips-card h3 {
+    color: #FB4545;
+    font-family: var(--poppins);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39.6px;
+}
+
+.ellips-card p {
+    color: rgba(25, 60, 63, 0.50);
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.12px;
+    text-decoration-line: strikethrough;
+    position: relative;
+}
+
+.ellips-card p::before {
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 1px;
+    background-color: rgba(25, 60, 63, 0.50);
+    transform: translateY(50%);
+    bottom: 50%;
+}
+
+.ellips-card img {
+    width: 213.965px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* blur card */
 
 .blur1 {
@@ -222,5 +277,420 @@
     background: linear-gradient(90deg, #fff 40%, rgba(0, 206, 169, 0.18));
     top: 0;
     left: 0;
+}
+
+/* Form */
+.form__box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    background-color: rgba(12, 67, 44, 0.30);
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.form__box.actve {
+    display: flex;
+    opacity: 1;
+}
+
+.form-card {
+    width: 935px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.form-card__left {
+    width: 45%;
+    background: rgba(0, 206, 169, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.form-card__left img {
+    width: 290.438px;
+    height: 389.617px;
+}
+
+.form-card__right {
+    width: 55%; 
+    padding: 40px;
+}
+
+.form-card__right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card__right form h2 {
+    color: #000;
+    font-family: var(--poppins);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39.6px;
+    margin-bottom: 12px;
+}
+
+.form-card__right form h2 span {
+    color: #3CB27F;
+}
+
+.form-card__right form p {
+    color: #48635B;
+    font-family: var(--poppins);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.76px;
+}
+
+.form-card__right form p span {
+    color: #3CB27F;
+}
+
+.form-card__right label {
+    color: #48635B;
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.12px;
+    margin: 24px 0 10px 0;
+}
+
+.form-card__right input {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #BED4DA;
+    background: #F3F7F8;
+    padding: 0 18px;
+    color: #000;
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.12px;
+    outline: none;
+}
+
+.form-card__right input::placeholder {
+    color: #BFD2CC;
+    font-family: var(--poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21.12px;
+}
+
+.form__btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    background: #FB4545;
+    outline: none;
+    border: 1px solid #FB4545;
+    outline: none;
+    cursor: pointer;
+
+    color: #FFF;
+    font-family: var(--poppins);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height:  22.44px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+}
+
+.form__btn:hover {
+    background-color: transparent;
+    color: #FB4545;
+}
+
+.close{
+    display: none;
+}
+
+
+
+
+
+/* ==============================================
+ /* Responsve 
+ ===============================================*/
+
+/* min 1440px */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
+
+/* 1285px */
+@media screen and (max-width: 1285px) {
+    .container {
+        padding: 38px 60px 0 60px;
+    }
+
+    .left__content{
+        width: 500px;
+    }
+
+    .left__content h1 {
+        font-size: 55px;
+    }
+
+    .left__content h1 span {
+        padding: 2px 10px;
+    }
+
+    .left__content .text svg:nth-child(2) {
+        right: 0px;
+        top: 50px;
+    }
+
+    .container__right .fon__img {
+        width: 700px;
+    }
+}
+
+
+/* 991px */
+@media screen and (max-width: 991px) {
+    .form__box {
+        padding: 0 20px;
+    }
+    .form-card {
+        width: 100%;
+    }
+
+}
+
+
+
+/* 820px */
+@media screen and (max-width: 820.99px) {
+    .container {
+        padding: 25px 12px;
+        background: url("../imgs/image\ 1\ \(1\).png") no-repeat center center;
+        background-size: cover;
+    }
+
+    .logo img{
+        width: 97.271px;
+        height: 60px;
+    }
+
+    .left__content {
+        width: 100%;
+    }
+
+    .left__content h1 {
+        font-size: 32px;
+        font-weight: 600px;
+        line-height: 44.8px;
+        margin-top: 17px;
+    }
+
+    .left__content p:nth-child(2) {
+        font-size: 16px;
+        line-height: 22.4px;
+        margin: 22px 0 15px 0;
+    }
+
+    .left__content .text p {
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+
+    .left__content .text p span {
+        font-size: 18px;
+    }
+
+    .left__content .text svg:nth-child(2) {
+       display: none;
+    }
+    
+    .left__content .text svg:nth-child(3) {
+        position: absolute;
+        display: block;
+        right: 0px;
+        top: 5px;
+        height: 90px;
+    }
+
+    .left__content .btn {
+        margin-top: 18px;
+        width: 309px;
+        height: 60px;
+        /* font style */
+        font-size: 17px;
+        line-height: 22.44px;
+    }
+
+    .left__servce {
+        display: none;
+    }
+
+    .container__right{
+        position: relative;
+        right: auto;
+        left: 0;
+        bottom: -30px;
+        margin-top: 22px;
+    }
+
+    .container__right .fon__img {
+        width: 100%;
+    }
+
+    .ellips-card {
+        width: 141px;
+        height: 141px;
+        bottom: 100px;
+        left: auto;
+        right: 30px;
+    }
+
+    .ellips-card img {
+        width: 97.293px;
+    }
+
+    .blur1 {
+        width: 545.157px;
+        height: 545.157px;
+        transform: rotate(90deg);
+        flex-shrink: 0;
+        border-radius: 545.157px;
+        background: rgba(0, 255, 178, 0.10);
+        filter: blur(250px);
+        left: -50px;
+        top: -30px;
+    }
+
+    .blur2 {
+        width: 409.522px;
+        height: 409.522px;
+        transform: rotate(90deg);
+        flex-shrink: 0;
+        border-radius: 409.522px;
+        background: rgba(0, 83, 206, 0.24);
+        filter: blur(250px);
+        top: auto;
+        bottom: -79px;
+        right: -130px;
+    }
+
+    .blur3 {
+        width: 409.522px;
+        height: 409.522px;
+        transform: rotate(90deg);
+        flex-shrink: 0; 
+        border-radius: 409.522px;
+        background: rgba(0, 206, 169, 0.18);
+        filter: blur(250px);
+        bottom: -44px;
+        right: auto;
+        left: -120px;
+    }
+
+    .blur4 {
+        background: linear-gradient(180deg, #fff 40%, rgba(0, 206, 169, 0.18));
+        z-index: 1;
+    }    
+}
+
+
+/* 700px */
+@media screen and (max-width: 700px) {
+    .form__box {
+        padding: 0;
+        height: 100vh;
+    }
+    .form-card {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px !important;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .form-card__left {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-card__left img{
+        width: 205.273px;
+        height: 275.37px;
+    }
+
+    .form-card__right {
+        width: 100%;
+        padding: 20px 12px;
+    }
+
+    .form-card__right form h2 {
+        font-size: 24px;
+        line-height: 31.68px;
+    }
+
+    .form-card__right form p {
+        font-size: 14px;
+        line-height: 18.48px;
+    }
+
+    .form-card__right form label {
+        font-size: 14px;
+        line-height: 18.48px;
+    }
+
+    .form__btn{
+        font-size: 17px;
+    }
+
+    .close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+    }
+
+}
+
+
+/* 600px */
+
+@media screen and (max-width: 600.99px) {
+    .container__right{
+       left: -50px;
+    }
+    .left__content .text svg:nth-child(3) {
+        height: 107.099px;
+    }
+
+    .ellips-card {
+        bottom: 20px;
+        left: auto;
+        right: -30px;
+    }
 
 }
