@@ -37,5 +37,8 @@ form__btn.addEventListener("click", () => {
         form__btn.target = "_blank";
 
     }
+
+    ism.value = "";
+    tel.value = "+998"
 });
 
