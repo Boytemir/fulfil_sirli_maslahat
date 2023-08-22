@@ -170,7 +170,7 @@
 .container__right {
     position: absolute;
     bottom: -5px;
-    right: -90px;
+    right: 30px;
 }
 
 .ellips-card {
@@ -403,6 +403,10 @@
     border: 1px solid #FB4545;
     outline: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 
     color: #FFF;
     font-family: var(--poppins);
@@ -432,14 +436,29 @@
  /* Responsve 
  ===============================================*/
 
-/* min 1440px */
-@media screen and (min-width: 1700px) {
+/* min 1920px */
+@media screen and (min-width: 1920px) {
     .container {
-        max-width: 1440px;
+        max-width: 1920px;
         margin: auto;
+    }
+
+    .container__right {
+        right: 120px;
     }
 }
 
+@media screen and (max-width: 1480px) {
+    .container__right {
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container__right {
+        right: -90px;
+    }
+}
 
 /* 1285px */
 @media screen and (max-width: 1285px) {
